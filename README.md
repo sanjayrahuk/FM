@@ -1,18 +1,18 @@
 # FM
 
-EXP NO: 4	GENERATION AND DETECTION OF FM
+## EXP NO: 4	GENERATION AND DETECTION OF FM
 
 
-AIM:
+# AIM:
 To write a program for Frequency Modulation and Demodulation using SCILAB and to observe and measure the frequency deviation and the modulation index of FM.
 
 
-EQUIPMENTS REQUIRED
+# EQUIPMENTS REQUIRED
 
 •	Computer with i3 Processor
 •	SCI LAB
 
-THEORY:
+# THEORY:
 
 Frequency modulation is a type of modulation in which the frequency of the high frequency (carrier) is varied in accordance with the instantaneous value of the modulating signal.
 FREQUENCY DEVIATION f and MODULATION INDEX m f :
@@ -23,7 +23,7 @@ We define modulation index m f the ratio between f and the modulating frequen
 m= f / fm
 
 
-FREQUENCY MODULATION GENERATION:
+# FREQUENCY MODULATION GENERATION:
 The circuits used to generate a frequency modulation must vary the frequency of a high frequency signal (carrier) as function of the amplitude of a low frequency signal (modulating signal). In practice there are two main methods used to generate FM.
 Algorithm
 1.	Define Parameters:
@@ -48,7 +48,7 @@ Algorithm
 
 
 
-PROCEDURE
+# PROCEDURE
 
 
 •	Refer Algorithms and write code for the experiment.
@@ -59,36 +59,52 @@ PROCEDURE
 •	If any Error, correct it in code and execute again
 Verify the generated waveform using Tabulation and Model Waveform
 
-MODEL GRAPH:
+# MODEL GRAPH:
 
 <img width="512" height="365" alt="image" src="https://github.com/user-attachments/assets/acd787bd-5281-4f1b-802f-1aa39fac9189" />
 
 
-Program
+# Program
+```
+Am=9.34;
+fm=879;
+Ac=10.94;
+fc=8790;
+fs=87900;
+t=0:1/fs:2/fm;
+b=4.17;
+em=Am*cos(2*3.14*fm*t);
+subplot(3,1,1);
+plot(t,em);
+ec=Ac*cos(2*3.14*fc*t);
+subplot(3,1,2);
+plot(t,ec);
+efm=Ac*cos(2*3.14*fc*t+b*sin(2*3.14*fm*t));
+subplot(3,1,3);
+plot(t,efm);
+```
 
 
-Output Waveform
+# Output Waveform
+
+<img width="1905" height="1071" alt="image" src="https://github.com/user-attachments/assets/ee50ae82-d025-43b9-8170-a3e44cc9cded" />
 
 
 
-Tabulation
+
+# Tabulation
+
+<img width="1280" height="709" alt="98" src="https://github.com/user-attachments/assets/7ab90b3c-4929-4d99-b5a2-67e2b61a6f7c" />
 
 
 
-Calculation
+# Calculation
+
+<img width="787" height="1280" alt="65" src="https://github.com/user-attachments/assets/aee385b8-4436-430a-800b-d6999ce7ffc6" />
 
 
 
-Frequency Deviation Practical = 
-
-Modulation Index Practical	= 
-
-Modulation Index Theoretical	=
-
-
-
-RESULT:
+# RESULT:
 
 Thus, the frequency modulation and demodulation is successfully done and the output is experimentally verified.
-
 
